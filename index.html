@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anthony's Zoo</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <h1><u>Welcome to Anthony's Zoo</u></h1>
+      
+    <!--Image Slider start-->
+    <!--source: https://www.youtube.com/watch?v=0wvrlOyGlq0-->
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+                <img src="img/slide_images/slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide_images/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide_images/slide3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/slide_images/slide4.jpg" alt="">
+            </div>
+            <!--slide images end-->
+            <!--Automatic Navigation start-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!--Automatic Navigation end-->
+        </div>
+        <!--Manual Navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--Manual Navigation end-->
+    </div>
+    <!--Image Slider end-->
+    
+    <!--Script for Auto Slider start-->
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+    <!--Script for Auto Slider end-->
+      
+    <h3>Our Animals:</h3>
+    <div class="link">
+        <ul>
+            <li><a href="pallas_cat.html">Pallas Cat</a></li>
+            <li><a href="kinkajou.html">Kinkajou</a></li>
+            <li><a href="hyrax.html">Hyrax</a></li>
+            <li><a href="emperor_tamarin.html">Emperor Tamarin</a></li>
+            <li><a href="echidna.html">Echidna</a></li>
+        </ul>
+    </div>
+      
+  </body>
+</html>
